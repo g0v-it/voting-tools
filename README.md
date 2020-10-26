@@ -1,9 +1,36 @@
 # voting-tools
 A set of tools for majority judgement and random election systems
 
-Autore: Mauro Fiorentini
+**Autore**: Mauro Fiorentini
 
-[[_TOC_]]
+  * [Introduzione](#introduzione)
+    + [Sicurezza](#sicurezza)
+    + [Passaggio dei dati](#passaggio-dei-dati)
+    + [Opzioni](#opzioni)
+    + [Parallelismo](#parallelismo)
+  * [Elezioni tramite sorteggio](#elezioni-tramite-sorteggio)
+    + [Procedura di estrazione](#procedura-di-estrazione)
+    + [Inizio dell'elezione](#inizio-dell-elezione)
+    + [Scelta delle parole chiave da parte dei garanti](#scelta-delle-parole-chiave-da-parte-dei-garanti)
+    + [Scelta delle parole chiave da parte dei candidati](#scelta-delle-parole-chiave-da-parte-dei-candidati)
+    + [Comunicazione delle parole chiave da parte dei garanti](#comunicazione-delle-parole-chiave-da-parte-dei-garanti)
+    + [Lettura dello stato e proclamazione dei risultati](#lettura-dello-stato-e-proclamazione-dei-risultati)
+    + [Calcolo dell'hash](#calcolo-dell-hash)
+  * [Elezioni tramite *majority judgement*](#elezioni-tramite--majority-judgement-)
+    + [Procedura di elezione](#procedura-di-elezione)
+    + [Chiavi crittografiche](#chiavi-crittografiche)
+    + [Inizio dell'elezione](#inizio-dell-elezione-1)
+    + [Ricezione dei voti](#ricezione-dei-voti)
+    + [Generazione di dati casuali](#generazione-di-dati-casuali)
+    + [Proclamazione dei risultati](#proclamazione-dei-risultati)
+- [Messaggi d'errore](#messaggi-d-errore)
+  * [Errori fatali](#errori-fatali)
+  * [Errori di I/O](#errori-di-i-o)
+  * [Errori dell'applicazione](#errori-dell-applicazione)
+- [Parametri dei programmi](#parametri-dei-programmi)
+  * [Elezioni tramite sorteggio](#elezioni-tramite-sorteggio-1)
+  * [Elezioni tramite *majority judgement*](#elezioni-tramite--majority-judgement--1)
+  * [License](#license)
 
 ## Introduzione
 
@@ -453,3 +480,8 @@ La tabella seguente descrive i parametri che regolano il funzionamento dei progr
 | Numero massimo di voti | 15 |
 | Massimo intervallo per la generazione di dati casuali, in secondi | 3600 |
 | Massimo intervallo per la proclamazione dei risultati, in minuti | 1440 |
+
+
+## License
+
+see [LICENSE file](LICENSE)
