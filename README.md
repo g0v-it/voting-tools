@@ -42,11 +42,9 @@ Il sistema di elezioni consta di due gruppi di programmi:
 
 Installazione:
 
-- Per fare pulizia: `make clean`
+- per fare pulizia: `make clean`
 - per generare gli eseguibi: `make all`
-- per generare la documentazione tecnica  `make documentation`
-
-Alla documentazione si accede con qualsiasi browser, partendo da html/index.html
+- per generare la documentazione tecnica  `make documentation` nella directory documentation
 
 **ATTENZIONE: La crittografia NON è abilitata**
 
