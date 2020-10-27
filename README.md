@@ -273,11 +273,13 @@ Il sistema non gestisce il caso di pareggio tra candidati, che dev'essere stabil
 
 Le chiavi crittografiche impiegate sono due, di 16 byte ciascuna. I programmi leggono le chiavi da un file, che per garantire la sicurezza deve in realtà essere una pipe con nome, nella quale custodi scrivono le loro chiavi e che viene chiusa immediatamente dopo.
 
-Se si desidera una maggior segretezza, ognuna delle chiavi può essere la combinazione d più chiavi, scelte da persone diverse e combinate con un semplice programma.
+Se si desidera una maggior segretezza, ognuna delle chiavi può essere la combinazione di più chiavi, scelte da persone diverse e combinate con un semplice programma.
 
 Le chiavi non sono permanentemente conservate in alcun luogo e devono essere immesse nuovamente ogni volta che si avvia uno dei programmi, vale a dire almeno tre volte.
 
 Nel caso in cui l'esecuzione del programma che riceve i voti sia interrotta, è necessario rilanciarlo, immettendo nuovamente le chiavi. Di conseguenza i custodi devono garantire la loro disponibilità per tutto il tempo in cui l'elezione resta aperta.
+
+**ATTENZIONE: la crittografia NON è attualmete abilitata**
 
 ### Inizio dell'elezione
 
