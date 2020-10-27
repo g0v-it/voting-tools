@@ -1,0 +1,7 @@
+rm -r TestMajorityDirectory
+../executable/CreateMajority TestMajorityDirectory 5 10 7 KeyFile
+../executable/VoteMajority TestMajorityDirectory KeyFile < VoteFile
+#../executable/VoteMajority TestMajorityDirectory KeyFile < pipe
+#../executable/NoiseMajority TestMajorityDirectory KeyFile 15 2
+#../executable/ResultMajority TestMajorityDirectory KeyFile 1
+../executable/ResultMajority TestMajorityDirectory KeyFile

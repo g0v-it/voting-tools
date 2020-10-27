@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////////////////////////////////
+//! \file
+//!
+//! \author	Mauro Fiorentini
+//!
+//! \date	02/11/2018
+//!
+//! \par	Function:
+//!	Contains the definition of inline functions of the
+//!	io_space::LinuxSystemManager class.
+//!
+////////////////////////////////////////////////////////////////////////////////
+
+namespace	system_space
+{
+
+////////////////////////////////////////////////////////////////////////////////
+//! \par	Description:
+//!	Default constructor.
+//!
+//! \throw	None.
+//!
+//! \returns	Not applicable.
+//!
+//| \see	LINUX_MAX_SLEEP_SECONDS
+//!
+////////////////////////////////////////////////////////////////////////////////
+
+LinuxSystemManager::LinuxSystemManager(void) noexcept: SystemManager(),
+	TicksPerSecond(sysconf(_SC_CLK_TCK))
+	//,SleepSlice(LINUX_MAX_SLEEP_SECONDS)
+	{
+	ApplicationStartTime = GetSystemTime();
+	}
+
+}

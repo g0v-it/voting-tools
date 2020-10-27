@@ -1,0 +1,86 @@
+////////////////////////////////////////////////////////////////////////////////
+//! \file
+//!
+//! \author	Mauro Fiorentini
+//!
+//! \date	30/10/2018
+//!
+//! \par	Function:
+//!	Contains the definition of the format of the files used for the random
+//!	election.
+//!
+////////////////////////////////////////////////////////////////////////////////
+
+//!#	File format definition
+//!	Definitions of majority judgement election file formats.
+
+////////////////////////////////////////////////////////////////////////////////
+//!
+//! \defgroup	MajorityFileFormats	Majority judgement election file formats
+//!	Definitions of data file formats for majority judgement election.
+//!
+//!	\{
+//!
+////////////////////////////////////////////////////////////////////////////////
+
+//!##	Election parameters file
+//!	The election parameter data file is composed by five lines,
+//!	in the following order:
+//!	- a line containing the number of candidates;
+//!	- a line containing the number of voters;
+//!	- a line containing the number of votes;
+//!	- a line containing the encoded key for the voters' file;
+//!	- a line containing the encoded key for the votes file.
+//!	.
+//!	Lines are in text format, without any extra character. \n
+//!	Numbers are decimal notation, keys are in hexadecimal notation. \n
+//!	Each key is mixed with random bytes and encode using itself as a key.
+
+# define	ParametersFileFormat
+
+//!##	Voters' data file
+//!	The voters' data file is composed by a sequence of records, one for
+//!	each voter. \n
+//!	Records are in binary format, without any separator. \n
+//!	Each record has the following format:
+//!	Index    | Filler
+//!	:-------:|:--------:
+//!	32 bytes | 32 bytes
+//!
+//!	Index is the index of corresponding voter data into the votes file. \n
+//!	Filler is a random filler.
+//!
+//! \see	VOTERS_RECORD_LENGTH
+
+# define	VotersFileFormat
+
+//!##	Votes file
+//!	The votes data file is composed by a sequence of records, one for each
+//!	voter. \n
+//!	Records are in binary format, without any separator. \n
+//!	Each record has the following format:
+//!	Vote 0 | Vote 1 | ...    | Vote n | Filler | Signature
+//!	:-----:|:------:|:------:|:------:|:------:|:---------:
+//!	1 byte | 1 byte | ...    | 1 byte | ...    | 64 bytes
+//!
+//!	Votes are stored in candidates' order, that is, first fote if the vote
+//!	for candidate number 0, next one is the vote for candidate number 1 and
+//!	so on. \n
+//!	Each vote is stored as \<filler> * \<maximum vote + 1> + \<actual vote>,
+//!	where \<filler> is a random number. \n
+//!	The filler at the end of the votes is from 0 to 7 bytes long; its length
+//!	is chosen so that the number of bytes occupied by all votes and filler
+//!	is a multiple of 8. \n
+//!	After each signature byte a random filler is inserted, so that the
+//!	signature is stored as follows:
+//!	Byte 1 | Filler | Byte 2 | Filler | ...   | Byte 32 | Filler
+//!	:-----:|:------:|:------:|:------:|:-----:|:-------:|:------:
+//!	1 byte | 1 byte | 1 byte | 1 byte | ...   | 1 byte  | 1 byte
+//!
+//! \see	SIGNATURE_LENGTH
+
+# define	VotesFileFormat
+
+////////////////////////////////////////////////////////////////////////////////
+//!	\}
+////////////////////////////////////////////////////////////////////////////////

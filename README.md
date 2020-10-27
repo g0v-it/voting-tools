@@ -44,7 +44,7 @@ Installazione:
 
 - per fare pulizia: `make clean`
 - per generare gli eseguibi: `make all`
-- per generare la documentazione tecnica  `make documentation` nella directory documentation
+- per generare la documentazione tecnica  `make documentation` nella directory documentation (requires doxigen)
 
 **ATTENZIONE: La crittografia NON è abilitata**
 

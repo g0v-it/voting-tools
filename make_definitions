@@ -1,0 +1,34 @@
+#===============================================================================
+#	Tools definitions
+#===============================================================================
+
+TOUCH		=	touch
+DELETE		=	rm -f
+CC		=	g++
+LINK		=	g++
+
+#===============================================================================
+#	Flags definitions
+#===============================================================================
+
+CCFLAGS			=	-std=c++11 -O3 -c			\
+				-I$(INCLUDE_DIR)			\
+				-I$(COMMON_INCLUDE_DIR)			\
+				-DPROCESSOR=INTEL_X86			\
+				-DSYSTEM=LINUX				\
+				-DCOMPILER=GNU_4			\
+				-DSKIP_GLOBAL_OPERATORS
+LINK_FLAGS		=
+OBJECT_NAME_FLAG	=	-o
+EXECUTABLE_NAME_FLAG	=	-o
+
+#===============================================================================
+#	Path names definitions
+#===============================================================================
+
+INCLUDE_DIR		=	./include
+SOURCE_DIR		=	./source
+OBJECT_DIR		=	./object
+COMMON_INCLUDE_DIR	=	../Common/include
+COMMON_OBJECT_DIR	=	../Common/object
+EXECUTABLE_DIR		=	../executable

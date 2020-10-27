@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////////
+//! \file
+//!
+//! \author	Mauro Fiorentini
+//!
+//! \date	25/10/2018
+//!
+//! \par	Function:
+//!	Contains the definition of the format of the files used for the random
+//!	election.
+//!
+////////////////////////////////////////////////////////////////////////////////
+
+//!#	File format definition
+//!	Definitions of random election file formats.
+
+////////////////////////////////////////////////////////////////////////////////
+//!
+//! \defgroup	RandomFileFormats	Random election file formats
+//!	Definitions of data file formats for random election.
+//!
+//!	\{
+//!
+////////////////////////////////////////////////////////////////////////////////
+
+//!##	Guarantors' data file
+//!	The guarantors' data file is composed by a sequence of records, one for
+//!	each guarantor. \n
+//!	Records are in binary format, without any separator. \n
+//!	Each record has the following format:
+//!	Key      | Hashed key | Signature
+//!	:-------:|:----------:|:--------:
+//!	55 bytes | 32 bytes   | 32 bytes
+//!
+//! \see	KEY_LENGTH
+//! \see	HASH_LENGTH
+//! \see	SIGNATURE_LENGTH
+//! \see	GUARANTOR_RECORD_LENGTH
+
+# define	GuarantorsFileFormat
+
+//!##	Candidates' data file
+//!	The candidates' data file is composed by a sequence of records, one for
+//!	each candidate. \n
+//!	Records are in binary format, without any separator. \n
+//!	Each record has the following format:
+//!	Index   | Key      | Signature | Vote
+//!	:------:|:--------:|:---------:|:---:
+//!	7 bytes | 48 bytes | 32 bytes  | 32 bytes
+//!
+//! \see	CANDIDATE_NUMBER_LENGTH
+//! \see	CANDIDATE_KEY_LENGTH
+//! \see	SIGNATURE_LENGTH
+//! \see	VOTE_LENGTH
+//! \see	CANDIDATE_RECORD_LENGTH
+
+# define	CandidatesFileFormat
+
+////////////////////////////////////////////////////////////////////////////////
+//!	\}
+////////////////////////////////////////////////////////////////////////////////
