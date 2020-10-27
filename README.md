@@ -39,7 +39,16 @@ Il sistema di elezioni consta di due gruppi di programmi:
 - un gruppo per gestire elezioni tramite sorteggio,
 - un gruppo per gestire le elezioni tramite l'algoritmo majority judgement.
 
-I programmi girano su un server dedicato e ricevono i dati introdotti tramite una GUI a disposizione degli utenti, su calcolatore o telefono mobile.
+
+Installazione:
+
+- Per fare pulizia: `make clean`
+- per generare gli eseguibi: `make all`
+- per generare la documentazione tecnica  `make documentation`
+
+Alla documentazione si accede con qualsiasi browser, partendo da html/index.html
+
+**ATTENZIONE: La crittografia NON è abilitata**
 
 ### Sicurezza
 
